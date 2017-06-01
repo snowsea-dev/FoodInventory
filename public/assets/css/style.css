@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700');
+
+.head-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #373A3C;
+  padding: 0 6px;
+}
+
+.normal-text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, .2);
+  z-index: 1000;
+}
+
+#header #logo {
+  float: left;
+  padding: 3px 0;
+}
+
+#header #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 30px;
+}
+
+/*
+@media (max-width: 768px) {
+  #header {
+    height: 80px;
+  }
+  #header #logo h1 {
+    font-size: 26px;
+  }
+  #header #logo img {
+    max-height: 40px;
+  }
+}*/
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+#footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #fff;
+  padding: 24px 0;
+  box-shadow: 0px -4px 12px rgba(0, 0, 0, .2);
+  text-align: center;
+}
+
+#footer #logo {
+  padding: 10px;
+}
+
+#footer .copyright {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #999999;
+  padding: 10px;
+
+}
+
+#footer #logo img {
+  padding: 0;
+  margin: 0;
+  max-height: 60px;
+}
+
+/*--------------------------------------------------------------
+# Button
+--------------------------------------------------------------*/
+
+.button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 16px;
+  margin: 0 0px;
+}
+
+.button:focus {
+  outline: none;
+}
+
+
+.button.selected {
+  background-color: #008AAE;
+}
+
+.button-primary {
+  background-color: #00CBEA;
+  color: #FFF;
+}
+
+.button-primary:hover {
+  box-shadow: 0 0 10px rgba(148, 238, 255, 1);
+}
+
+.button-text {
+  background-color: #FFF;
+  color: #373A3C;
+}
+
+.button-text:hover {
+  color: #008AAE;
+}
+
+.button-link {
+  background-color: #FFF;
+  color: #00CBEA;
+}
+
+.button-link:hover, .button-link::selection {
+  border: none;
+}
+
+/*--------------------------------------------------------------
+# Dialog
+--------------------------------------------------------------*/
+
+.dialog-control-group {
+  margin: 0px;
+  padding: 0px;
+}
+
+.dialog-control {
+  margin: 7px 0px;
+  padding: 10px 16px;
+  width: 100%;
+  border: 1px solid #E3E3E3;
+  border-radius: 4px;
+}
+
+.dialog-control.active {
+  border: 1px solid #00CBEA;
+}
+
+.dialog-link {
+  color: #00CBEA;
+  margin-right: 130px;
+}
+
+.dialog-footer {
+  margin: 7px 0px;
+  text-align: center;
+}
+
+.dialog-footer.right {
+  text-align: right;
+}
+
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal-dialog {
+  width: 400px;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+
+.modal-dialog .head-text {
+  margin: 0px 0px 15px 0px;
+}
+
+.modal-body {
+  padding: 30px;
+}
+
+/*--------------------------------------------------------------
+# Main Content
+--------------------------------------------------------------*/
+.main-content {
+  margin-top: 70px;
+  margin-bottom: 165px;
+}
+
+.main-content .header {
+  margin: 30px 0px;
+}
+
+.main-content table {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #999999;
+}
+
+.main-content table th {
+  color: #373A3C;
+  font-size: 16px;
+}
+
+.main-content table .number {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.main-content table .name {
+  color: #373A3C;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-content table tr td, .main-content table tr th {
+  padding: 15px;
+}
+
+.main-content table .selected td {
+  background-color: red;
+}
