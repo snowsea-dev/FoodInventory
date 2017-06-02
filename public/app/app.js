@@ -15,6 +15,11 @@ app.controller('myCtrl', function($scope, $http) {
 
     $scope.addItem = function() {
 
+      var username = localStorage.getItem("user");
+      if (username == undefined) {
+        $.notify("Please Login !", "info");
+      }
+
       if ($scope.input.item.name == null || $scope.input.item.description == null || $scope.input.item.expireDate == null) {
         $.notify("Please fill all information !", "warn");
         return;
@@ -22,7 +27,7 @@ app.controller('myCtrl', function($scope, $http) {
 
       $scope.items.push($scope.input.item);
       $scope.addCurItem($scope.input.item);
-      var username = localStorage.getItem("user");
+
 
       var params = {
         username: username,
@@ -113,7 +118,6 @@ app.controller('myCtrl', function($scope, $http) {
         $scope.curItems = $scope.expiredItems;
       }
       $scope.mode = mode;
-      $scope.getItem();
     }
 
     $scope.login = function() {
@@ -132,7 +136,8 @@ app.controller('myCtrl', function($scope, $http) {
 
           localStorage.setItem("user", user.email);
           $('#login_dialog').modal('toggle');
-          $.notify("Welcome !", "success");
+          $scope.getItem();
+          $.notify(`Welcome ${user.email} !`, "success");
 
         }, function myError(response) {
           $.notify("Username or Password is not correct !", "error");
@@ -168,5 +173,16 @@ app.controller('myCtrl', function($scope, $http) {
       });
     }
 
-    $scope.getItem();
+    $scope.load = function() {
+      var username = localStorage.getItem("user");
+      if (username == undefined) {
+        $.notify("Please Login !", "info");
+      }
+      else {
+        $.notify(`Welcome ${username} !`, "success");
+        $scope.getItem();
+      }
+    }
+
+    $scope.load();
 });
