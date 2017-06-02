@@ -38,7 +38,7 @@ app.controller('myCtrl', function($scope, $http) {
       $http.post("/add_item", {item: params})
         .then(function(response) {
           var item = response.data;
-          $('#login_dialog').modal('toggle');
+          $('#add_item_dialog').modal('toggle');
 
         }, function myError(response) {
           $.notify("Network Error !", "error");
